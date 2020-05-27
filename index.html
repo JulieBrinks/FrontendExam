@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Viewports for a more responsive webpage -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+	<title>MTV</title>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <!-- include database -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+
+  <!-- Stylesheet --> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- Contains all HTML elements -->
+  <div id="skeleton">
+    
+    <!-- Menu -->
+    <div class="menu">
+
+      <!-- Menu icon -->
+		  <div class="icon" onclick="menuFunction()"><i class="fa fa-bars fa-3x"></i></div>
+      
+      <!-- Logo -->
+      <div class="logo"><img src="https://allpunkedup.com/wp-content/uploads/2016/07/mtv-.png" width="80px" height="50px"/></div>
+      
+      <!-- Chromecast -->
+      <form>
+        <button class="button" id="castme"><img src="https://image.flaticon.com/icons/svg/61/61029.svg" width="50px" height="50px"/></button>
+      </form>
+
+      <!--Menu options-->
+      <div id="myLinks">
+            <a href="#" id="frontpage">Frontpage</a>
+            <a href="#" id="oldschool">Old school MTV</a>
+            <a href="#" id="newschool">New school MTV</a>
+            <a href="#" id="about">About</a>
+      </div>
+    </div>
+
+    <!-- Contains titles, logo, video and chat -->
+    <div id="wrapper">
+      
+        <!-- Logo and text -->
+        <img id="logo"></img>
+        <h1 id="title"></h1>
+
+        <!-- Player -->
+        <div class="container"><div id="player"></div></div>
+      
+        <!-- Chat -->
+        <div id="chat">
+          <form id="send-chat" onsubmit="return sendBesked();">
+            <input type="text" id="chat-input">
+            <button type="submit" id="send">SEND</button>
+          </form>
+          <ul id="Output"></ul>
+        </div>       
+    </div>
+  </div>
+
+  <!-- The script to end all scripts -->
+  <script src="script.js"></script>
+  <!-- Chromecast API source -->
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+  
+  </body>
+</html>

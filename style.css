@@ -1,0 +1,156 @@
+html {    
+    background-color: aliceblue;   
+    background-size: cover;
+}
+
+#wrapper {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  display: block;
+  width: 590px;
+  position: sticky;
+  top:0;
+  background-color: #9D3C96;
+  text-align: center;
+  z-index: 1; /* make sure menubar overlaps other elements when scrolling */
+}
+
+.icon {
+    display: block;
+    background-color: #9D3C96;
+    padding: 12px;
+    cursor: pointer;
+    float: left;
+}
+
+.menu form {
+  display: block;
+  float: right;
+  padding: 12px;
+}
+
+/*links i menuen vises ikke som udgangspunkt*/
+.menu #myLinks {
+    display: none;
+}
+
+
+/*minimal styling af menuens indhold*/
+.menu a {
+    background-color:#EC008C;
+    color: #00ADEF;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Helvetica;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+/*hvad der sker når man holder musen over noget i menuen*/
+.menu a:hover {
+    background-color: #00ADEF;
+    color: whitesmoke;
+}
+
+/* small logo - shown in menubar */
+.logo {
+  display: inline-block;
+  padding: 12px;
+  cursor: pointer; /* links to home */
+}
+
+#castme {
+    border: 0;
+    background-color: #9D3C96;
+    cursor: pointer;
+}
+
+/* big logo - shown on home */
+#logo{
+  cursor: pointer;
+  padding: 2em;
+  max-width: 150%;
+  height: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  background: -webkit-linear-gradient( #ED1C24, #9D3C96, #00ADEF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+h2{
+  text-align: center;
+   background: -webkit-linear-gradient( #ED1C24, #9D3C96, #00ADEF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p{
+  display: block;
+  color: #9D3C96;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* make sure YT video is responsive */
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  bottom: 2em;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+#player {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* hide chat until user is on player page */
+#chat {
+  display:none;
+  width: 545px;
+  margin:auto;
+  }
+
+  #chat-input{
+    width: 100%;
+  }
+
+  #send {
+    width: 100%;
+    color:#9D3C96;
+    font-weight: bold;
+    border-radius: 25px;
+    background: yellow;
+  }
+
+ #Output > * {
+    text-align: center;
+    list-style: none;
+    color: #9D3C96;
+    font-weight: bold;
+ }
+
+@media (min-width: 500px) {
+
+  .menu{
+      width: auto;
+  } 
+}
